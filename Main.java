@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package praktikum6;
+package praktikum6_tugas;
 
 /**
  *
@@ -10,15 +10,17 @@ package praktikum6;
  */
 public class Main {
     public static void main(String[] args) {
-        Hewan hewan = new Kucing();
-        hewan.bersuara(); // Output: Meow
+        KeranjangBelanja keranjang = new KeranjangBelanja();
 
-        Kucing kucing = new Kucing();
-        kucing.makan("ikan"); 
-        kucing.makan("ikan", 2); 
+        Produk buku = new Buku("Bumi Manusia", 115000);
+        Produk elektronik = new Elektronik("Headset", 200000);
+        Produk pakaian = new Pakaian("Blouse", 150000);
 
-        Anjing anjing = new Anjing();
-        anjing.bersuara(); // Output: Woof
-        anjing.makan("daging", 3); 
+        keranjang.tambahProduk(buku);
+        keranjang.tambahProduk(elektronik);
+        keranjang.tambahProduk(pakaian);
+
+      keranjang.tampilkanDetail();
     }
-}
+}  
+
